@@ -4,11 +4,11 @@ using System.Text.Json.Serialization;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace HandIn3.Models {
+namespace HandIn4.Models {
 public class Adult : Person {
     
     
-    [JsonPropertyName("jobTitle")]
+    [JsonPropertyName("JobTitle")]
     [Required]
     public string JobTitle { get; set; }
     

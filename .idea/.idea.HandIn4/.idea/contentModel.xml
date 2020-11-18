@@ -7,14 +7,35 @@
     <e p="C:\Users\ioncr\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
     <e p="F:\UNIVERSITY\Semester 3\DNT\HandIn4" t="IncludeFlat">
       <e p="HandIn4" t="IncludeRecursive">
+        <e p="Adults.db" t="Include" />
+        <e p="Adults.db-shm" t="Include" />
+        <e p="Adults.db-wal" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
-          <e p="AdultsController.cs" t="Include" />
+          <e p="AdultController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
         </e>
+        <e p="Database" t="Include">
+          <e p="Context" t="Include">
+            <e p="AdultsDBContext.cs" t="Include" />
+          </e>
+          <e p="DAOAdults.cs" t="Include" />
+          <e p="DAOUser.cs" t="Include" />
+          <e p="DataFromDB.cs" t="Include" />
+        </e>
         <e p="HandIn4.csproj" t="IncludeRecursive" />
+        <e p="Migrations" t="Include">
+          <e p="20201114133438_InitialSetUp.cs" t="Include" />
+          <e p="20201114133438_InitialSetUp.Designer.cs" t="Include" />
+          <e p="UserDBContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Adult.cs" t="Include" />
+          <e p="Person.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">

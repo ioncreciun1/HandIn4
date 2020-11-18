@@ -7,58 +7,51 @@ using System.Xml.Serialization;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace HandIn3.Models {
+namespace HandIn4.Models {
 public class Person {
-    [XmlIgnore]
-    public ObjectId _id { get; set; }
-
-    public string MongoId
-    {
-        get { return _id.ToString(); }
-        set { _id = ObjectId.Parse(value); }
-    }
     
+    [Key]
+    [Required]
+    [JsonPropertyName("Id")]
+    public int Id { get; set; }
     
-    [JsonPropertyName("AdultID")]
-    public int AdultID { get; set; }
-    
-    [JsonPropertyName("firstName")]
+    [JsonPropertyName("FirstName")]
     [NotNull]
     [Required,MinLength(3,ErrorMessage = "Please Enter Adult First Name")]
     public string FirstName { get; set; }
     
-    [JsonPropertyName("lastName")]
+    [JsonPropertyName("LastName")]
     [NotNull]
     [Required,MinLength(1,ErrorMessage = "Please Enter Adult Last Name")]
     public string LastName { get; set; }
     
-    [JsonPropertyName("hairColor")]
+    [JsonPropertyName("HairColor")]
     [Required]
     [ValidHairColor]
     public string HairColor { get; set; }
     
-    [JsonPropertyName("eyeColor")]
+    [JsonPropertyName("EyeColor")]
     [Required]
     [NotNull]
     [ValidEyeColor]
     public string EyeColor { get; set; }
 
-    [JsonPropertyName("age")]
+    [JsonPropertyName("Age")]
     [NotNull, Range(0, 125)] [Required] 
     public int Age { get; set; }
     
-    [JsonPropertyName("weight")]
+    [JsonPropertyName("Weight")]
     [Required]
     [NotNull, Range(1, 250)]
     [BsonRepresentation(BsonType.Double, AllowTruncation=true)]
     public float Weight { get; set; }
     
-    [JsonPropertyName("height")]
+    [JsonPropertyName("Height")]
     [Required]
     [NotNull, Range(30, 250)]
     public int Height { get; set; }
     
-    [JsonPropertyName("sex")]
+    [JsonPropertyName("Sex")]
     [NotNull]
     [Required]
     public string Sex { get; set; }

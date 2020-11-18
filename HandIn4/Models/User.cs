@@ -1,13 +1,19 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using MongoDB.Bson;
 
-namespace HandIn_3.Models
+namespace HandIn4.Models
 {
     public class User
     {
-        public ObjectId _id { get; set; }
-        
+        [Key]
+        [JsonPropertyName("Id")]
+        public int Id { get; set; }
+        [Required]
+        [JsonPropertyName("UserName")]
         public string UserName { get; set; }
+        [Required,MinLength(6)]
+        [JsonPropertyName("Password")]
         public string Password { get; set; }
     }
 }
